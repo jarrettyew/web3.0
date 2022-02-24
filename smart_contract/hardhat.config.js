@@ -1,3 +1,4 @@
+require("dotenv").config({ path: __dirname + "/.env.local" });
 require("@nomiclabs/hardhat-waffle");
 
 module.exports = {
@@ -5,7 +6,7 @@ module.exports = {
   networks: {
     ropsten: {
       url: process.env.ALCHEMY_URL,
-      accounts: [process.env.FUND_PRIVATE_KEY],
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
 };
